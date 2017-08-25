@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/fengjianjunstudy/chat-app#readme",
   "dependencies": {
+    "mime": "^1.3.6",
     "socket.io": "^2.0.3"
   }
 }
