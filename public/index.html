@@ -28,20 +28,6 @@
             integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
             crossorigin="anonymous"></script>
     <script src="js/chat.js"></script>
-<script type="text/javascript">
-    var io = io('http://localhost');
-    $('#send-form').on('submit',function(){
-        io.emit('chat message', $('#send_messages').val());
-        $('#send_messages').val('');
-        return false;
-    })
-    io.on('connect', function(){
-
-    });
-    io.on('mes', function(data){
-        console.log(data)
-    });
-    io.on('disconnect', function(){});
-</script>
+    <script src="js/chat_ui.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 1.客户端监听 nameResult(更名结果)
-2.客户端发射 nameAttempt(更名) message(发送消息)
+2.客户端发射 nameAttempt(更名) message(发送消息) join(更换房间)
 3.服务器端监听 nameAttempt(更名)  message（接受消息） join(更换房间)  disconnect（断开连接）
 4.服务器端发射  nameResult(更名结果)  message（将接受收的消息发送给同一个房间的其他人）
 
