@@ -24,12 +24,24 @@
             </form>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+            crossorigin="anonymous"></script>
     <script src="js/chat.js"></script>
 <script type="text/javascript">
-    var socket = io('http://localhost');
-    socket.on('connect', function(){ console.log(123)});
-    socket.on('event', function(data){});
-    socket.on('disconnect', function(){});
+    var io = io('http://chatapp.com');
+    $('#send-form').on('submit',function(){
+        io.emit('chat message', $('#send_messages').val());
+        $('#send_messages').val('');
+        return false;
+    })
+    io.on('connect', function(){
+
+    });
+    io.on('mes', function(data){
+        console.log(data)
+    });
+    io.on('disconnect', function(){});
 </script>
 </body>
 </html>
